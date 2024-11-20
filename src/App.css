@@ -1,0 +1,48 @@
+#root {
+  --corPcyan: hsl(180, 66%, 49%);
+  --corPdark: hsl(257, 27%, 26%);
+  --corSred: hsl(0, 87%, 67%);
+  --corNgray: hsl(0, 0%, 75%);
+  --corNgrayish: hsl(257, 7%, 63%);
+  --corNverydarkb: hsl(255, 11%, 22%);
+  --corNverydarkv: hsl(260, 8%, 14%);
+  font-family: 'poppins';
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body, ul{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button{
+  background-color: var(--corPcyan);
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'poppins';
+  font-weight: 700;
+  padding: 12px 32px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button:hover{
+  filter: opacity(0.8);
+}

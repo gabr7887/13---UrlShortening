@@ -1,0 +1,41 @@
+.container{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 20px;
+  position: relative;
+}
+
+.nav{
+  display: flex;
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+.nav ul{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navItem{
+  color: var(--corNgrayish);
+}
+
+.navItem:hover{
+  color: var(--corNverydarkb);
+}
+
+@media (width < 700px) {
+  .nav{
+    background-color: var(--corNverydarkv);
+    display: grid;
+    justify-content: center;
+  }
+
+  .nav ul{
+    flex-direction: column;
+
+  }
+}
