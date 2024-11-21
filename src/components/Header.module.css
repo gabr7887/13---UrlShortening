@@ -28,14 +28,64 @@
 }
 
 @media (width < 700px) {
+  .container{
+    padding: 32px 20px;
+  }
   .nav{
+    position: absolute;
     background-color: var(--corNverydarkv);
-    display: grid;
     justify-content: center;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    top: 100%;
+    display: none;
+  }
+
+  .nav.active{
+    display: grid;
   }
 
   .nav ul{
     flex-direction: column;
+  }
+
+  .hamburgerMenu{
+    justify-self: end;
+    background: none;
+    border: none;
+    border-top: 3px solid var(--corNgrayish);
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .hamburgerMenu::after,
+  .hamburgerMenu::before{
+    content: " ";
+    width: 26px;
+    display: block;
+    height: 3px;
+    background-color: var(--corNgrayish);
+    margin-top: 5px;
+    transition: 0.3s;
+  }
+
+  .hamburgerMenu.active{
+    border-top: transparent;
+  }
+  
+  .hamburgerMenu.active::before{
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 0px;
+  }
+  
+  .hamburgerMenu.active::after{
+    transform: rotate(135deg);
+    top: 0px;
 
   }
+
+
 }
