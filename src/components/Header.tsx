@@ -22,7 +22,7 @@ const Header = () => {
         </ul>
         <ul>
           <li><a className={style.navItem} href="">Login</a></li>
-          <li><ButtonRound style={{fontSize: '16px', padding: '8px 24px'}}>SingUp</ButtonRound></li>
+          <li><ButtonRound style={{fontSize: '16px', padding: '8px 24px' }}>SingUp</ButtonRound></li>
         </ul>
       </nav>
     </div>

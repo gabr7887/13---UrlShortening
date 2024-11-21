@@ -33,23 +33,31 @@
   }
   .nav{
     position: absolute;
-    background-color: var(--corNverydarkv);
+    background-color: var(--corPdark);
     justify-content: center;
     width: 90%;
     left: 5%;
     right: 5%;
     top: 100%;
     display: none;
+    border-radius: 12px;
+    gap: 32px;
   }
 
   .nav.active{
     display: grid;
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
   }
 
   .nav ul{
     flex-direction: column;
   }
 
+
+
+
+  /* Menu Hamburguer */
   .hamburgerMenu{
     justify-self: end;
     background: none;
