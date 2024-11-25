@@ -53,9 +53,16 @@
   .nav ul{
     flex-direction: column;
   }
+  
 
+  .firstList{
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--corNgrayish);
+  }
 
-
+  .navItem{
+    color: white;
+  }
 
   /* Menu Hamburguer */
   .hamburgerMenu{
@@ -92,7 +99,6 @@
   .hamburgerMenu.active::after{
     transform: rotate(135deg);
     top: 0px;
-
   }
 
 

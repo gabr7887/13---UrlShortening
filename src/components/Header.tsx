@@ -15,14 +15,14 @@ const Header = () => {
       {mobile && <button className={`${style.hamburgerMenu} ${mobileActive ? style.active : ''}`} onClick={() => setMobileActive(!mobileActive)}>
       </button>}
       <nav className={`${style.nav} ${mobileActive ? style.active : ''}`}>
-        <ul>
+        <ul className={style.firstList}>
           <li><a className={style.navItem} href="">Features</a></li>
           <li><a className={style.navItem} href="">Pricing</a></li>
           <li><a className={style.navItem} href="">Resources</a></li>
         </ul>
         <ul>
           <li><a className={style.navItem} href="">Login</a></li>
-          <li><ButtonRound style={{fontSize: '16px', padding: '8px 24px' }}>SingUp</ButtonRound></li>
+          <li style={mobile ? {width: '100%'} : {}}><ButtonRound style={mobile ? {fontSize: '16px', padding: '8px 24px', width: '100%', textAlign: 'center'} : {fontSize: '16px', padding: '8px 24px' }}>SingUp</ButtonRound></li>
         </ul>
       </nav>
     </div>
