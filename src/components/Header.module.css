@@ -3,8 +3,14 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 48px;
-  padding: 64px 20px;
+  padding: 64px 0px;
   position: relative;
+}
+
+@media (width < 1240px) {
+  .container{
+    padding: 64px 20px;
+  }
 }
 
 .nav{
@@ -93,12 +99,10 @@
   .hamburgerMenu.active::before{
     transform: rotate(-135deg);
     position: absolute;
-    top: 0px;
   }
   
   .hamburgerMenu.active::after{
     transform: rotate(135deg);
-    top: 0px;
   }
 
 

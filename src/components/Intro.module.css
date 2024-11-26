@@ -1,0 +1,22 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 128px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.content div h1{
+  font-size: 64px;
+  color: var(--corNverydarkv);
+}
+
+.content div p{
+  font-size: 18px;
+  color: var(--corNgray);
+}
