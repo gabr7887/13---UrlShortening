@@ -1,0 +1,18 @@
+.container{
+  background-image: url('../assets/images/bg-shorten-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--corPdark);
+  display: flex;
+  gap: 16px;
+  padding: 48px 64px;
+  border-radius: 16px;
+}
+
+.container input{
+  flex: 1;
+  padding: 16px;
+  font-size: 18px;
+  color: var(--corPdark);
+}
+

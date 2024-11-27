@@ -1,0 +1,47 @@
+.inputDiv{
+  display: flex;
+  flex: 1;
+  position: relative;
+  
+}
+
+.inputDiv label{
+  font-size: 18px;
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  opacity: 0.7;
+}
+
+.inputDiv span{
+  position: absolute;
+  bottom: -25px;
+  left: 15px;
+  color: var(--corSred);
+  display: none;
+}
+
+.inputDiv input{
+  border: 2px solid;
+  border-radius: 16px;
+}
+
+.inputDiv input:focus{
+  outline: none;
+}
+
+.inputDiv.errorState span{
+  display: block;
+}
+
+.inputDiv.errorState label{
+  color: var(--corSred);
+}
+
+.inputDiv.errorState input{
+  border-color: var(--corSred);
+}
+
+.disabled{
+  visibility: hidden;
+}
