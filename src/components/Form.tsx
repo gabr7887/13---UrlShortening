@@ -17,7 +17,7 @@ const Form = () => {
   }
 
   return (
-    <div>
+    <div className={Style.bg}>
       <form onSubmit={handleSubmit} className={`container ${Style.container}`}>
         <FormInput label='LinkInput' customPlaceHolder='Shorten a link here' 
         stateValue={value}

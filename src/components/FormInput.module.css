@@ -1,8 +1,8 @@
+
 .inputDiv{
   display: flex;
   flex: 1;
   position: relative;
-  
 }
 
 .inputDiv label{
@@ -40,8 +40,4 @@
 
 .inputDiv.errorState input{
   border-color: var(--corSred);
-}
-
-.disabled{
-  visibility: hidden;
 }
