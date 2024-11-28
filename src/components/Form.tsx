@@ -5,12 +5,25 @@ import FormInput from './FormInput'
 
 const Form = () => {
   const [value, setValue] = React.useState('');
+  const [error, setError] = React.useState(false);
+
+  function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+    if(value.length > 0) {
+      console.log("ok");
+    } else {
+      setError(true);
+    }
+  }
+
   return (
     <div>
-      <form className={`container ${Style.container}`}>
+      <form onSubmit={handleSubmit} className={`container ${Style.container}`}>
         <FormInput label='LinkInput' customPlaceHolder='Shorten a link here' 
         stateValue={value}
-        setStateValue={setValue}/>
+        setStateValue={setValue}
+        stateError={error}
+        setStateError={setError}/>
         <Button>Shorten it!</Button>
       </form>
     </div>

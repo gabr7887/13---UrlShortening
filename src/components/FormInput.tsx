@@ -5,7 +5,9 @@ type inputParams = React.HTMLProps<'input'> & {
   label : string,
   customPlaceHolder: string,
   stateValue: string,
-  setStateValue: React.Dispatch<React.SetStateAction<string>>;
+  setStateValue: React.Dispatch<React.SetStateAction<string>>,
+  stateError: boolean,
+  setStateError: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const FormInput = (props : inputParams) => {
@@ -17,11 +19,16 @@ const FormInput = (props : inputParams) => {
 
   function OnBlur(){
     setIsFocused(false);
+    if(props.stateValue === ''){
+      props.setStateError(true);
+    } else {
+      props.setStateError(false);
+    }
   }
 
   return (
-    <div className={`${Style.inputDiv} ${Style.errorState}`}>
-      <label className={isFocused && props.stateValue === '' ? Style.disabled : ''} htmlFor={props.label}>{props.customPlaceHolder}</label>
+    <div className={`${Style.inputDiv} ${props.stateError ? Style.errorState : ''}`}>
+      {!isFocused && props.stateValue === '' && <label htmlFor={props.label}>{props.customPlaceHolder}</label>}
       <input onFocus={OnFocus} onBlur={OnBlur} onChange={({target}) => props.setStateValue(target.value)} type="text" name={props.label} id={props.label}/>
       <span className={Style.errorMessage}>please add a link</span>
     </div>
