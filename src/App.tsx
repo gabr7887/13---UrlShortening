@@ -2,6 +2,7 @@ import './App.css'
 import Form from './components/Form'
 import Header from './components/Header'
 import Intro from './components/Intro'
+import Statistics from './components/Statistics'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
     <Header/>
     <Intro/>
     <Form/>
+    <Statistics/>
     </>
   )
 }
